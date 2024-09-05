@@ -17,8 +17,7 @@ from ui_commands import set_ui_commands
 logging.basicConfig(level=logging.INFO)
 
 bot = Bot(
-    # token=config.bot_token.get_secret_value(),
-    token=config.bot_token_test.get_secret_value(),
+    token=config.bot_token.get_secret_value(),
     default=DefaultBotProperties(parse_mode=ParseMode.HTML)
 )
 
