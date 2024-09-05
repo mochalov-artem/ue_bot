@@ -7,5 +7,5 @@ router = Router()
 
 
 @router.message(F.text, Command("test"))
-async def answer_yes(message: Message):
+async def cmd_test(message: Message):
     await message.reply('test ok!')
