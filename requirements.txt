@@ -1,0 +1,5 @@
+mega.py
+aiogram
+pydantic-settings
+aiosqlite
+sqlalchemy
