@@ -50,11 +50,11 @@ async def main():
         top.router,
         db_statistics.router,
         scheduled_mem.router,
-        test.router,
+        test.router
     )
     dp.include_routers(
         wannamem_yes.router,
-        pic_rate.router,
+        pic_rate.router
     )
 
     await set_ui_commands(bot)
