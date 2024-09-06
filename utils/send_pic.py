@@ -24,7 +24,7 @@ async def send_pic_orm(message: Message, session: AsyncSession, bot: Bot, mega: 
             file_key = tuple(map(int, image.file_key.split(',')))
 
             bytes_photo = await (mega_func_2(image.file_id, file_key, mega))
-            photo_id = await message.reply_photo(
+            photo_id = await message.answer_photo(
                 photo=BufferedInputFile(bytes_photo, f"{image.file_name}.jpg"),
                 reply_markup=get_rate_keyboard(pic_id=image.file_id),
             )
@@ -51,7 +51,7 @@ async def send_pic_raw(message: Message, session: AsyncSession, bot: Bot, mega: 
                 f_id = image[1]
                 file_key = tuple(map(int, image[2].split(',')))
                 bytes_photo = await (mega_func_2(f_id, file_key, mega))
-                photo_id = await message.reply_photo(
+                photo_id = await message.answer_photo(
                     photo=BufferedInputFile(bytes_photo, f"{image[3]}.jpg"),
                     reply_markup=get_rate_keyboard(pic_id=image[1]),
                 )

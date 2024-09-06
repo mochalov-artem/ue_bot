@@ -30,7 +30,7 @@ async def cb_wannamem_yes(callback: types.CallbackQuery, session, bot: Bot, mega
                 f_id = image[1]
                 file_key = tuple(map(int, image[2].split(',')))
                 bytes_photo = await (mega_func_2(f_id, file_key, mega))
-                photo_id = await callback.message.reply_photo(
+                photo_id = await callback.message.answer_photo(
                     photo=BufferedInputFile(bytes_photo, f"{image[3]}.jpg"),
                     reply_markup=get_rate_keyboard(pic_id=image[1]),
                 )
