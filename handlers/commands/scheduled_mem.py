@@ -13,7 +13,7 @@ from utils.mega_files import mega_func_2
 
 FLAG = 0
 CHAT_ID = int(config.ue_land_group.get_secret_value())
-TIMER = 15 * 60
+TIMER = 10 * 60
 
 router = Router()
 
